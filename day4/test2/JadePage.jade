@@ -1,0 +1,15 @@
+doctype html
+html
+    head
+        title Index Page
+    body
+        //JADE String
+        #header
+            h1 Hello Jade
+            h2 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati aliquid reprehenderit aliquam officia nobis, sint aperiam omnis, quod voluptatibus architecto fugit laudantium sapiente in odio? Voluptatum earum odit nesciunt deleniti.
+        hr
+        -for(var i=0; i<10; i++){
+            p
+                a(href="http://hanbit.co.kr", data-test="multiple Attribute") Go to Hanbit Media #{i}
+                
+        -}
