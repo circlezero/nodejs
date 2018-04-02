@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Socket.io</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        window.onload = function(){
+            var socket = io.connect();
+
+            socket.on('smart', function(data){
+                alert(data);
+            })
+
+            document.getElementById('button').onclick = function() {
+                var text = document.getElementById('text').value;
+
+                socket.emit('circle', text);
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="text">
+    <input type="button" id="button" value="echo">
+</body>
+</html>
